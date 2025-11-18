@@ -1,2 +1,2 @@
 # PMPP
-TU-Darmstadt coursr
+TU-Darmstadt course
