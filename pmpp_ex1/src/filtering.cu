@@ -13,6 +13,24 @@ __global__ void gray_scale_kernel(
 )
 {
 	//TODO: 1.2) Implement conversion
+	uint64_t x = blockIdx.x * blockDim.x + threadIdx.x;
+	uint64_t y = blockIdx.y * blockDim.y + threadIdx.y;
+
+	if (x < w && y < h)
+	{
+		std::uint32_t pixel = src_data[y * w + x];
+
+		std::uint8_t r = pixel & 0xFF;
+		std::uint8_t g = (pixel >> 8) & 0xFF;
+		std::uint8_t b = (pixel >> 16) & 0xFF;
+
+		float f = 0.2126f * r + 0.7152f * g + 0.0722f * b;
+		std::uint8_t gray = static_cast<std::uint8_t>(f + 0.5f);
+
+		std::uint32_t gray_pixel = (gray << 16) | (gray << 8) | gray;
+
+		dst_data[y * w + x] = gray_pixel;
+	}
 }
 void to_grayscale(gpu_image& dst, gpu_image const& src)
 {
