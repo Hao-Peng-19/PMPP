@@ -11,7 +11,7 @@ cpu_matrix<T> make_cpu_matrix(std::uint64_t width, std::uint64_t height)
 	img.width = width;
 	img.height = height;
 	//TODO: 1.1a) Allocate host memory
-	//img.data =
+	img.data = make_host_array<T>(width * height);
 	return img;
 }
 
@@ -26,7 +26,7 @@ gpu_matrix<T> make_gpu_matrix(std::uint64_t width, std::uint64_t height)
 	img.width = width;
 	img.height = height;
 	//TODO: 1.1a) Allocate device memory
-	//img.data =
+	img.data =make_device_array<T>(width * height);
 	return img;
 }
 
@@ -41,6 +41,15 @@ gpu_matrix<T> to_gpu(cpu_matrix<T> const& img)
 	cpy.width = img.width;
 	cpy.height = img.height;
 	//TODO: 1.1b) Allocate and copy to device memory
+	//Allocate
+	cpy.data = make_device_array<T>(img.width * img.height);
+	//copy
+	cudaMemcpy(
+		cpy.data.get(),          // dst (GPU)
+		img.data.get(),          // src (CPU)
+		img.width * img.height * sizeof(T),
+		cudaMemcpyHostToDevice
+	);
 	return cpy;
 }
 
@@ -55,6 +64,16 @@ cpu_matrix<T> to_cpu(gpu_matrix<T> const& img)
 	cpy.width = img.width;
 	cpy.height = img.height;
 	//TODO: 1.1b) Allocate and copy to device memory
+	//allocate
+	cpy.data = make_host_array<T>(img.width * img.height);
+
+	// copy GPU → CPU
+	cudaMemcpy(
+		cpy.data.get(),          // dst (CPU)
+		img.data.get(),          // src (GPU)
+		img.width * img.height * sizeof(T),
+		cudaMemcpyDeviceToHost
+	);
 	return cpy;
 }
 
