@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\cpu_brute_force.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\datatypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\matrix.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\matrix_reader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\qubo_brute_forcer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\qubo_energy.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\state_vector.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\timer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\under\OneDrive\Studium\Programmierung Massiv-Paralleler Prozessoren\pmpp-final-topic3\pmpp-final-topic3\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{021C0B45-E10C-3D3D-9299-EDF7FBA6C38C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{776EC429-93C2-3039-8EF3-8234C2E6793B}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

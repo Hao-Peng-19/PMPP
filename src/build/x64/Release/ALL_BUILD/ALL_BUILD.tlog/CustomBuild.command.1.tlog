@@ -1,0 +1,10 @@
+^C:\USERS\UNDER\ONEDRIVE\STUDIUM\PROGRAMMIERUNG MASSIV-PARALLELER PROZESSOREN\PMPP-FINAL-TOPIC3\PMPP-FINAL-TOPIC3\SRC\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src" "-BC:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src/build" --check-stamp-file "C:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src/build/CMakeFiles/generate.stamp"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

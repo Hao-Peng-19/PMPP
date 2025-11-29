@@ -1,0 +1,10 @@
+^C:\USERS\UNDER\ONEDRIVE\STUDIUM\PROGRAMMIERUNG MASSIV-PARALLELER PROZESSOREN\PMPP-FINAL-TOPIC3\PMPP-FINAL-TOPIC3\SRC\BUILD\CMAKEFILES\3DDC3CF104F50AC2E1D69C50734E759E\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" "-SC:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src" "-BC:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src/build" --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file "C:/Users/under/OneDrive/Studium/Programmierung Massiv-Paralleler Prozessoren/pmpp-final-topic3/pmpp-final-topic3/src/build/QUBOBruteForcing.sln"
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd
