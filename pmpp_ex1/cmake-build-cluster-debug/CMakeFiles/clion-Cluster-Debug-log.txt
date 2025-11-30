@@ -1,3 +1,0 @@
-/usr/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DENABLE_CUDA=ON -G "Unix Makefiles" -S /tmp/tmp.w7nWpEtVFC/PMPP/pmpp_ex1 -B /tmp/tmp.w7nWpEtVFC/PMPP/pmpp_ex1/cmake-build-cluster-debug
-CMake Error: The source directory "/tmp/tmp.w7nWpEtVFC/PMPP/pmpp_ex1" does not appear to contain CMakeLists.txt.
-Specify --help for usage, or press the help button on the CMake GUI.
